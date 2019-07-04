@@ -7,44 +7,45 @@ Author: Moumita Kamal
 ********************************/
 
 import java.util.*;
-//import static java.lang.System.*;
 
 public class CipherGenerator {
     public static void main(String[]args) {
         Scanner keyboard = new Scanner (System.in);
         String p_text;							//string to store the plain text
+        int cipher = 0;
+		while(cipher != 4) {
+		    System.out.println("Enter number to select:\n1. Atbash Cipher\n2. Caeser Cipher\n3. Vigenere Cipher\n4. Exit program");
+		    cipher = keyboard.nextInt();	//user choice input
 
-		while(true) {
-		    System.out.println("Enter number to select:\n1. Atbash Cipher\n2. Caeser Cipher\n3. Vigenere Cipher");
-		    int cipher = keyboard.nextInt();	//user choice input
+            if (cipher != 1 && cipher != 2 && cipher != 3 && cipher != 4) {                  // checking to see if user opted out before asking for plain text input
+                System.err.println("Invalid entry! Please try again.");
+            }else if (cipher != 4){
+                System.out.println("Enter plain text: ");
+                keyboard.nextLine();
+                p_text = keyboard.nextLine().toUpperCase(); //plain text input converted to upper case
+                
+                if(cipher == 1) {                   //Atbash cipher
+                    System.out.println("The atbash cipher for " + p_text + " is: " + atbashCipher(p_text));
+                }else if(cipher == 2) {             //Caeser cipher
+                    System.out.println("Enter key(integer value): ");
+                    int key = keyboard.nextInt();   //user preferred key (integer value)
+                    System.out.println("The caeser cipher for " + p_text + " is: " + caeserCipher(p_text, key));
+                }else if(cipher == 3) {             //Vigenere cipher
+                    /********************
+                    //Yet to be completed
+                    *********************/  
 
-		    System.out.println("Enter plain text: ");
-		    InputStream.skip()
-		    p_text = keyboard.nextLine();		//plain text input
-
-		    if(cipher == 1) {					//Atbash cipher
-		        System.out.println("printing... " + atbashCipher(p_text));
-		    }else if(cipher == 2) {				//Caeser cipher
-		        System.out.println("Enter key(integer value): ");
-		        int key = keyboard.nextInt();	//user preferred key (integer value)
-		        System.out.println("printing... " + caeserCipher(p_text, key));
-		    }else if(cipher == 3) {				//Vignere cipher
-		    	/********************
-		    	//Yet to be completed
-		    	*********************/	
-		    	
-		        /*System.out.println("Enter period(integer value): ");
-		        int period = keyboard.nextInt();
-		        System.out.println("Enter key(string value): ");
-		        String key = keyboard.next();
-		        System.out.println("printing... " + vigenereCipher(p_text, period, key));*/
-		    }else
-		        System.err.println("Invalid entry! please try again.");
+                    /*System.out.println("Enter period(integer value): ");
+                    int period = keyboard.nextInt();*/
+                    System.out.println("Enter key(string value): ");
+                    String key = keyboard.next();
+                    System.out.println("The vigenere cipher for " + p_text + " is: " + vigenereCipher(p_text, key));
+                }
+            }
 		}
 	}
 
 	public static String atbashCipher (String p_text) {
-        p_text = p_text.toUpperCase();			//converting all characters to uppercase
         char [] c = p_text.toCharArray();		//converting string to character array
         int [] i = new int [c.length];
         
@@ -79,15 +80,15 @@ public class CipherGenerator {
         return p_text;
     }
     
-    public static String vigenereCipher (String p_text, int period, String key) {
+    public static String vigenereCipher (String p_text, String key) {
         /**************************
         //this method is unfinished
 		***************************/
-
+		char [] alpha = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
         p_text = p_text.toUpperCase();
-        char [] c = p_text.toCharArray();
-        int [] i = new int [c.length];
-        int [] keys = new int [period];
+        char [] plain = p_text.toCharArray();
+        int [] i = new int [plain.length];
+        //int [] keys = new int [period];
         
         /*for(int x=0; x< c.length; x++) {
             i[x] = c[x];
@@ -97,10 +98,10 @@ public class CipherGenerator {
             c[x] = (char)i[x];
         }*/
         
-        p_text = new String (c);
+        p_text = new String (plain);
         
         return p_text;
     }
 }
-}
+
     
