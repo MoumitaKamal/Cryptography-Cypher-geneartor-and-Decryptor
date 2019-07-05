@@ -3,7 +3,7 @@ This repository contains a few codes to generate, encrypt, and decrypt cyphers a
 
 **CipherGenerator**
 
-  This code takes a plain text as input and generates Atbash cipher, Caesar ciphere, or Vigenere cipher (as per user chioce). The vigenere cipher generation part of the code is currently incomplete.
+  This code takes a plain text as input and generates Atbash cipher, Caesar ciphere, or Vigenere cipher (as per user chioce). To learn more about how to encrypt and decrypt a vigenere cypher go to [this link](https://www.dcode.fr/vigenere-cipher)
 
 **CaesarCipherDecryptor**
 
