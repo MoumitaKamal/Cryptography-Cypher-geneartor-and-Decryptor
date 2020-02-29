@@ -17,4 +17,4 @@ This repository contains a few codes to generate, encrypt, and decrypt cyphers a
 
 **VigenereCipherDecryptor**
 
-  This program helps in Vigenere Cipher decoding by calculating the index of coincidence (IC). It takes a Vigenere cipher text as an input from user and calculates the IC for that cipher text. More information on how to decrypt a vigenere cipher can be found at the [Practical Cryptography] (http://practicalcryptography.com/cryptanalysis/stochastic-searching/cryptanalysis-vigenere-cipher/) website.
+  This program helps in Vigenere Cipher decoding by calculating the index of coincidence (IC). It takes a Vigenere cipher text as an input from user and calculates the IC for that cipher text. More information on how to decrypt a vigenere cipher can be found at the [Practical Cryptography](http://practicalcryptography.com/cryptanalysis/stochastic-searching/cryptanalysis-vigenere-cipher/) website.
