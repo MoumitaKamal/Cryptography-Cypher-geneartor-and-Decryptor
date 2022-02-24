@@ -1,4 +1,4 @@
-# Cryptography-Fun-Stuff
+# Cryptography: Cypher geneartor and Decryptor
 This repository contains a few codes to generate, encrypt, and decrypt cyphers and plaintexts. Each code is independent of one another and does not need any additional file or data to be used. There are currently three cipher generator and decryptor codes in the repository. 
 
 **CipherGenerator**
